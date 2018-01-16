@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row justify-content-sm-center">
+        <div class="col-sm-8">
+            <h2 class="title">{{vm.title}}</h2>
+            <form>
+                <div class="form-group">
+                    <label>Número Brinco</label>
+                    <input type="text" ng-model="vm.record.brinco" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input type="text" ng-model="vm.record.nome" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Raça</label>
+                    <input type="text" ng-model="vm.record.raca" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Número de crias</label>
+                    <input type="Number" ng-model="vm.record.crias" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Data de nascimento</label>
+                    <input type="date" ng-model="vm.record.dtNascimento" class="form-control">
+                </div>
+                <button ng-click="vm.save()" type="button" class="btn btn-primary btn-md">Salvar Registro</button>
+                <a ui-sref="vaca.list" class="btn btn-danger">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>

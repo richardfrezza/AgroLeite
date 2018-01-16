@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row justify-content-sm-center">
+    <div class="col-sm-8">
+      <h2 class="title">{{vm.title}}</h2>
+      <form>
+        <div class="form-group">
+          <label>Serviço/Produto</label>
+          <input type="text" ng-model="vm.record.descricao" class="form-control">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Quantidade</label>
+            <input type="Number" ng-model="vm.record.quantidade" class="form-control">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Valor Pago</label>
+            <input type="text" ng-model="vm.record.preco" class="form-control" ui-number-mask>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="vaca">Vaca</label>
+            <select name="vaca" ng-model="vm.record.vaca" ng-options="vaca.nome for vaca in vm.recordVacas" ng-change="{{vaca.nome}}" class="form-control">
+                <option ng-value="vm.record.vaca"> Selecione uma vaca</option>
+                {{vaca.nome}}
+            </select>
+          </div>
+         
+        <button ng-click="vm.save()" type="button" class="btn btn-primary btn-md">Salvar Registro</button>
+        <a ui-sref="gasto.list" class="btn btn-danger">Cancelar</a>
+      </form>
+    </div>
+  </div>
+</div>
