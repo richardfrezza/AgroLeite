@@ -25,15 +25,15 @@ public class Ordenha implements Serializable, Entidade {
     private Long id;
     @Column(name = "cd_ordenha", unique = true)
     private String codigo;
-    @Column(name = "dt_ordenha")
+    @Column(name = "dt_ordenha", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtOrdenha;
-    @Column(name = "nr_litros", length = 5)
+    @Column(name = "nr_litros", length = 5, nullable = false)
     private Integer litros;
     @Column(name = "observacao")
     private String observacao;
     @ManyToOne
-    @JoinColumn(name = "id_vaca", nullable=false)
+    @JoinColumn(name = "id_vaca", nullable = false)
     private Vaca vaca;
     
     public Integer getLitros() {

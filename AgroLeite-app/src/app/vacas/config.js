@@ -22,7 +22,7 @@ export const vacaConfig = (modulo) => {
         url: '/list',
         controller: ListController,
         controllerAs: 'vm'
-      })
+       })
       .state('vaca.new', {
         template: require('@views/vacas/form.html'),
         url: '/new',

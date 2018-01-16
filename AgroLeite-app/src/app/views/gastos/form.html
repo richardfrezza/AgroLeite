@@ -19,12 +19,10 @@
         </div>
         <div class="form-group">
           <label for="vaca">Vaca</label>
-            <select name="vaca" ng-model="vm.record.vaca" ng-options="vaca.nome for vaca in vm.recordVacas" class="form-control">
-                <option ng-value="{{vm.record.vaca}}"> Selecione uma vaca</option>
+            <select name="vaca" ng-model="vm.record.vaca" ng-options="vaca as vaca.nome for vaca in vm.recordVacas track by vaca.id" class="form-control">
+                <option value=""> Selecione uma vaca</option>
             </select>
         </div>
-        <h1>You selected: {{vm.record.vaca}}</h1>
-         
         <button ng-click="vm.save()" type="button" class="btn btn-primary btn-md">Salvar Registro</button>
         <a ui-sref="gasto.list" class="btn btn-danger">Cancelar</a>
       </form>

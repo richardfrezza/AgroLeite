@@ -8,21 +8,24 @@
                         <input type="datetime-local" ng-model="vm.record.dtOrdenha" class="form-control">
                         <small class="form-text text-muted">Informe a data e hora que houve a ordenha.</small>
                     </div>
-                    <div class="form-group">
-                        <label>Litros</label>
-                        <input type="Number" ng-model="vm.record.litros" class="form-control">
-                        <small class="form-text text-muted">Litros ordenhados.</small>
-                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="vaca">Vaca</label>
+                            <select name="vaca" ng-model="vm.record.vaca" ng-options="vaca as vaca.nome for vaca in vm.recordVacas track by vaca.id" class="form-control">
+                                <option value=""> Selecione uma vaca</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Litros</label>
+                            <input type="Number" ng-model="vm.record.litros" class="form-control">
+                            <small class="form-text text-muted">Litros ordenhados.</small>
+                        </div>
+                   </div>
                     <div class="form-group">
                         <label>Observação</label>
-                        <input type="text" ng-model="vm.record.observacao" class="form-control">
+                        <textarea ng-model="vm.record.observacao" class="form-control" rows="5"></textarea>
                     </div>
-                    <div class="form-group">
-                    <label for="vaca">Vaca</label>
-                        <select name="vaca" ng-model="vm.record.vaca" ng-options="vaca.nome for vaca in vm.recordVacas" class="form-control" id="vaca">
-                            <option value=""> Selecione uma vaca</option>
-                        </select>
-                    </div>
+   
                     <button ng-click="vm.save()" type="button" class="btn btn-primary btn-lg">Salvar Registro</button>
                     <a ui-sref="ordenha.list" class="btn btn-danger">Cancelar</a>
                 </form>
