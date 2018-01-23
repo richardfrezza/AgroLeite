@@ -1,31 +1,22 @@
 <div class="container">
-        <h2>{{vm.respostas.questionario.titulo}}</h2>
-        <h4><i>{{vm.respostas.questionario.descricao}}</i></h4>
-       
+    <br><h4>Dados gerais - Acompanhamento</h4><br>
         <div class="table-responsive">
           <table class="table table-striped table-condensed">
             <thead>
               <tr>
-                <th>Pergunta</th>
-                <th>Resposta</th>
-                <th>Peso</th>
+                <th>Total de gastos até o momento</th>
+                <th>Quantidade de litros produzidos</th>
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="item in vm.respostas.respostas | orderBy:'usuario.nome'">
-                                
-                <td>{{$index+1}} - {{item.pergunta.titulo}}</td>
-                <td>{{item.opcao.descricao}}</td>
-                <td>{{item.pergunta.peso}}</td>
+                  
+                <td><h4><font color="red">{{vm.valorTotal | currency:'R$'}}</font></h4></td>
+                <td><h4><font color="blue">{{vm.quantidadeTotal}} Litros</font></h4></td>
                                   
               </tr>
             </tbody>
           </table>
         </div>
         <div class="panel panel-info">
-        <div class="panel-heading">Pontuação obtida</div>
-          <div class="panel-body">
-            {{vm.respostas.pontuacao}}
-          </div>
-      </div>
+        
       </div>
