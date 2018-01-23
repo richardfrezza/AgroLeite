@@ -2,15 +2,11 @@ import swal from 'sweetalert2'
 
 export default class MainController {
 
-    constructor(GastoServico, Notification, OrdenhaServico) {
-        this.filterField = 'descricao'
-        this.filterValue = ''
-        this.order = 'descricao'
+    constructor(GastoServico, OrdenhaServico) {
         this.records = []
         this.recordsOrdenha = []
         this._service = GastoServico
         this._serviceOrdenha = OrdenhaServico
-        this._notify = Notification
         this.valorTotal = 0;
         this.quantidadeTotal = 0;
         this.load()
@@ -46,4 +42,4 @@ export default class MainController {
       
 }
 
-MainController.$inject = ['GastoServico', 'Notification', 'OrdenhaServico']
+MainController.$inject = ['GastoServico', 'OrdenhaServico']
