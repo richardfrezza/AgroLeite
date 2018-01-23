@@ -34,6 +34,15 @@ export default class FormController {
                 this._notify.success('Registro salvo com sucesso!')
                 this._state.go('ordenha.list')
             }).catch(erro => {
+                if(!this.record.dtOrdenha){
+                    this._notify.error('Data da ordenha não pode ser nula!')    
+                }
+                if(!this.record.vaca){
+                    this._notify.error('Deve ser informada uma vaca!')    
+                }
+                if(!this.record.litros){
+                    this._notify.error('Quantidade de litros não pode ser nulo!')    
+                }
                 this._notify.error('Erro ao salvar o registro!')
             })
     }

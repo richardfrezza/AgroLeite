@@ -19,15 +19,15 @@ public class Vaca implements Serializable, Entidade {
     @Column(name = "id_vaca")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "nm_vaca", length = 80)
+    @Column(name = "nm_vaca", length = 80, nullable = false)
     private String nome;
-    @Column(name = "nr_brinco", length = 20)
+    @Column(name = "nr_brinco", length = 20, nullable = false)
     private String brinco;
     @Column(name = "nr_crias", length = 5)
     private Integer crias;
     @Column(name = "raca", length = 300)
     private String raca;
-    @Column(name = "dt_nascimento")
+    @Column(name = "dt_nascimento",  nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtNascimento;
     

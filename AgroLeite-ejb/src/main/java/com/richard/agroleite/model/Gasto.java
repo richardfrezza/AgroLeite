@@ -20,11 +20,11 @@ public class Gasto implements Serializable, Entidade {
     @Column(name = "id_gastos")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "ds_produto", length = 200)
+    @Column(name = "ds_produto", length = 200, nullable = false)
     private String descricao;
-    @Column(name = "vl_preco", precision = 15, scale = 5)
+    @Column(name = "vl_preco", precision = 15, scale = 5, nullable = false)
     private BigDecimal preco;
-    @Column(name = "qt_utilizada", precision = 15, scale = 5)
+    @Column(name = "qt_utilizada", precision = 15, scale = 5, nullable = false)
     private BigDecimal quantidade;
     @ManyToOne
     @JoinColumn(name = "id_vaca")

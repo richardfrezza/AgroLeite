@@ -1,12 +1,18 @@
 <div class="container-fluid">
         <div class="row justify-content-sm-center">
             <div class="col-sm-8">
-                    <div class="form-group">
                 <h2 class="title">{{vm.title}}</h2>
                 <form>
-                        <label>Data</label>
-                        <input type="datetime-local" ng-model="vm.record.dtOrdenha" class="form-control">
-                        <small class="form-text text-muted">Informe a data e hora que houve a ordenha.</small>
+                    <a class="btn btn-warning pull-right btn-sm" style="margin-top: -68px; margin-left: 320px;" href="javascript:history.back()">
+                        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                        <span><b><i>Voltar</i></b></span>
+                    </a>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Data</label>
+                            <input type="datetime-local" ng-model="vm.record.dtOrdenha" class="form-control">
+                            <small class="form-text text-muted">Informe a data e hora que houve a ordenha.</small>
+                        </div> 
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-8">
@@ -26,7 +32,7 @@
                         <textarea ng-model="vm.record.observacao" class="form-control" rows="5"></textarea>
                     </div>
    
-                    <button ng-click="vm.save()" type="button" class="btn btn-primary btn-lg">Salvar Registro</button>
+                    <button ng-click="vm.save()" type="button" class="btn btn-primary btn-md">Salvar Registro</button>
                     <a ui-sref="ordenha.list" class="btn btn-danger">Cancelar</a>
                 </form>
             </div>

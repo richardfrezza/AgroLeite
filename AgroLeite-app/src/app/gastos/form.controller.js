@@ -21,6 +21,7 @@ export default class FormController {
             .then(data => {
                 this.recordVacas = data
         })
+                
     }
     
     save() {
@@ -29,6 +30,15 @@ export default class FormController {
                 this._notify.success('Registro salvo com sucesso!')
                 this._state.go('gasto.list')
             }).catch(erro => {
+                if(!this.record.preco){
+                    this._notify.error('Preço não pode ser nulo!')    
+                }
+                if(!this.record.quantidade){
+                    this._notify.error('Quantidade não pode ser nula!')    
+                }
+                if(!this.record.descricao){
+                    this._notify.error('Serviço/Produto não pode ser nulo!')    
+                }
                 this._notify.error('Erro ao salvar o registro!')
                 console.log(erro)
             })

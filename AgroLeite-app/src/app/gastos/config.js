@@ -13,9 +13,7 @@ export const gastoConfig = (modulo) => {
       .state('gasto', {
         template: require('@views/default.html'),
         url: '/gastos',
-        onEnter: ['$state', function($state) {
-          $state.go('gasto.list')
-        }]
+        redirectTo: 'gasto.list'
       })
       .state('gasto.list', {
         template: require('@views/gastos/list.html'),

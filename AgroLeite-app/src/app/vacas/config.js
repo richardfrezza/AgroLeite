@@ -13,9 +13,7 @@ export const vacaConfig = (modulo) => {
       .state('vaca', {
         template: require('@views/default.html'),
         url: '/vacas',
-        onEnter: ['$state', function($state) {
-          $state.go('vaca.list')
-        }]
+        redirectTo: 'vaca.list'
       })
       .state('vaca.list', {
         template: require('@views/vacas/list.html'),

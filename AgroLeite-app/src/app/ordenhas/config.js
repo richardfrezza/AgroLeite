@@ -13,9 +13,7 @@ export const ordenhaConfig = (modulo) => {
       .state('ordenha', {
         template: require('@views/default.html'),
         url: '/ordenhas',
-        onEnter: ['$state', function($state) {
-          $state.go('ordenha.list')
-        }]
+        redirectTo: 'ordenha.list'
       })
       .state('ordenha.list', {
         template: require('@views/ordenhas/list.html'),

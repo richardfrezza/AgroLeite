@@ -3,9 +3,15 @@
         <div class="col-sm-8">
             <h2 class="title">{{vm.title}}</h2>
             <form>
-                <div class="form-group">
-                    <label>Número Brinco</label>
-                    <input type="text" ng-model="vm.record.brinco" class="form-control">
+                <a class="btn btn-warning pull-right btn-sm" style="margin-top: -68px; margin-left: 320px;" href="javascript:history.back()">
+                    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                    <span><b><i>Voltar</i></b></span>
+                </a>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label>Número Brinco</label>
+                        <input type="text" ng-model="vm.record.brinco" class="form-control">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Nome</label>
@@ -15,14 +21,16 @@
                     <label>Raça</label>
                     <input type="text" ng-model="vm.record.raca" class="form-control">
                 </div>
-                <div class="form-group">
-                    <label>Número de crias</label>
-                    <input type="Number" ng-model="vm.record.crias" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Data de nascimento</label>
-                    <input type="date" ng-model="vm.record.dtNascimento" class="form-control">
-                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label>Número de crias</label>
+                        <input type="Number" ng-model="vm.record.crias" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Data de nascimento</label>
+                        <input type="date" ng-model="vm.record.dtNascimento" class="form-control">
+                    </div>
+                </div>    
                 <button ng-click="vm.save()" type="button" class="btn btn-primary btn-md">Salvar Registro</button>
                 <a ui-sref="vaca.list" class="btn btn-danger">Cancelar</a>
             </form>

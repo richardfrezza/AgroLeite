@@ -25,6 +25,15 @@ export default class FormController {
                 this._notify.success('Registro salvo com sucesso!')
                 this._state.go('vaca.list')
             }).catch(erro => {
+                if(!this.record.dtNascimento){
+                    this._notify.error('Data de nascimento não pode ser nula!')    
+                }
+                if(!this.record.nome){
+                    this._notify.error('Nome não pode ser nulo!')    
+                }
+                if(!this.record.brinco){
+                    this._notify.error('Número do brinco não pode ser nulo!')    
+                }
                 this._notify.error('Erro ao salvar o registro!')
             })
     }
