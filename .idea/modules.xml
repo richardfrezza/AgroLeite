@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AgroLeite.iml" filepath="$PROJECT_DIR$/AgroLeite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AgroLeite-ear/AgroLeite-ear.iml" filepath="$PROJECT_DIR$/AgroLeite-ear/AgroLeite-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AgroLeite-ejb/AgroLeite-ejb.iml" filepath="$PROJECT_DIR$/AgroLeite-ejb/AgroLeite-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AgroLeite-web/AgroLeite-web.iml" filepath="$PROJECT_DIR$/AgroLeite-web/AgroLeite-web.iml" />
+    </modules>
+  </component>
+</project>
