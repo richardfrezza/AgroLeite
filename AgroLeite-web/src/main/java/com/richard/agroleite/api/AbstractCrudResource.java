@@ -76,6 +76,8 @@ public abstract class AbstractCrudResource<T extends Entidade> {
     @Path("{id}")
     public Response delete(@PathParam("id") Long id) {
         getService().remove(id);
+        getService().remove(id);
+        getService().remove(id);
         return Response.status(Response.Status.NO_CONTENT)
                 .build();
     }
